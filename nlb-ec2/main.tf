@@ -25,8 +25,6 @@ resource "aws_lb" "nlb" {
 }
 
 resource "aws_instance" "nlb-ec2" {
-  count = "1"
-
   ami           = var.ami-id
   instance_type = var.instance-type
   key_name = var.tag-key

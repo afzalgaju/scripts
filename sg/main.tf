@@ -45,7 +45,7 @@ resource "aws_instance" "sg_instance" {
   ami               = var.ami-id
   instance_type     = var.instance-type
   availability_zone = "ap-south-1a"
-  security_groups   = ["${var.aws_security_group}"]
+  security_groups   = "aws_security_group.allow_sg"
 
   tags = {
     name = "web-server"

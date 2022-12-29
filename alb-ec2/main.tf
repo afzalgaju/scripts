@@ -28,10 +28,18 @@ resource "aws_lb" "alb" {
     Environment = "production"
   }
 }
+resource "aws_lb_listener" "alb_ec2" { 
+load_balancer_arn = aws_lb.alb.arn
+  port              = "80" 
+  protocol          = "HTTP"
+  default_action {   
+  type  = "forward"  
+  target_group_arn = aws_lb_target_group.alb.arn
+  }
+}
+
 
 resource "aws_instance" "arunec2" {
-  count = "1"
-
   ami           = var.ami-id
   instance_type = var.instance-type
   
