@@ -8,7 +8,7 @@ variable "engine" {
   default = "postgres"
 }
 variable "engine_version" {
-    type = number
+  type    = number
   default = 13.4
 }
 variable "instance_class" {
@@ -19,10 +19,13 @@ variable "name" {
   default = "mydb"
 }
 variable "username" {
- default =  "mahira"
+  default = "mahira"
 }
 variable "password" {
   default = "admin1234"
+}
+variable "parameter_group_name" {
+  default = "default.postgres13"
 }
 variable "backup_retention_period" {
   default = 7

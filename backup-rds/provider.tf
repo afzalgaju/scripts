@@ -11,9 +11,7 @@ provider "aws" {
   alias  = "replica"
 }
 
-
 provider "aws" {
-  region     = "us-east-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIASFI5CKBB5CJPI2VY"
+  secret_key = "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"
 }
