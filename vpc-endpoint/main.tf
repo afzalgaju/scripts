@@ -23,6 +23,7 @@ resource "aws_vpc_endpoint" "s3" {
 }
 EOF
 }
+
 resource "aws_vpc_endpoint" "dynamodb" {
   vpc_id = aws_vpc.my-vpc.id
   service_name = "com.amazonaws.us-east-1.dynamodb"
